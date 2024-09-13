@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: #e3f9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        10px 10px 20px rgba(255, 182, 193, 0.4),  /* Light Pink shadow */
+        -10px -10px 20px rgba(173, 216, 230, 0.4), /* Light Blue shadow */
+        10px -10px 20px hsla(120, 73%, 75%, 0.4);  /* Light Green shadow */
+}
+
+.calculator {
+    background-color: #3a4452;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.calculator form input {
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+}
+
+form .display {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+form .display input {
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    box-shadow: none;
+}
+
+form input.equal {
+    width: 145px;
+}
+
+form input.operator {
+    color: aqua;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px; /* Adjust the size as needed */
+    color: #3a4452; /* Main text color */
+    font-weight: bold;
+    margin: 20px 0; /* Add some space below the heading */
+    letter-spacing: 2px; /* Optional: Add some spacing between the letters */
+    font-family: 'Arial', sans-serif; /* Change the font-family as per your preference */
+    text-shadow: 
+        2px 2px 0px #033818,   /* Red shadow */
+        4px 4px 0px #09caec,   /* Green shadow */
+        6px 6px 0px hsla(120, 73%, 75%, 0.4);  /* Light Green shadow */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+        height: 100vh; /* Allow the height to adjust based on content */
+    }
+
+    .calculator {
+        width: 100%;
+        max-width: 350px;
+        padding: 15px;
+    }
+
+    form .display input {
+        font-size: 35px;
+    }
+
+    .calculator form input {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+        margin: 8px;
+    }
+
+    form input.equal {
+        width: 120px;
+    }
+
+    h1 {
+        font-size: 40px; /* Smaller heading on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 10px;
+        height: 100vh; /* Allow the height to adjust based on content */
+    }
+    .calculator {
+        width: 100%;
+        max-width: 300px;
+        padding: 10px;
+    }
+
+    .calculator form input {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+        margin: 5px;
+    }
+
+    form .display input {
+        font-size: 25px;
+    }
+
+    form input.equal {
+        width: 100px;
+    }
+
+    h1 {
+        font-size: 34px; /* Even smaller heading for very small screens */
+    }
+}
